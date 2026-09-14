@@ -1,4 +1,4 @@
-﻿# Customer Churn & Retention Analytics
+# Customer Churn & Retention Analytics
 ### Enterprise Subscriber Intelligence, Predictive Risk Modeling & Retention ROI Optimization
 
 [![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen.svg)](https://Udaysajwan.github.io/customer-churn-retention-analytics/)
@@ -39,15 +39,14 @@ This repository is built as a modular, production-grade data science project:
 
 ---
 
-## 📚 Comprehensive PDF Documentation Guides
+## 📚 Executive PDF Documentation
 
-This repository includes 3 distinct, publication-quality PDF guides compiled using ReportLab:
+This repository includes 2 distinct, publication-quality PDF guides compiled using ReportLab:
 
 | Document | File Path | Audience & Purpose |
 | :--- | :--- | :--- |
 | **1. Executive Intelligence Report** (5 Pages) | [`Customer_Churn_Retention_Analytics_Report.pdf`](Customer_Churn_Retention_Analytics_Report.pdf) | Executive summary, data cleansing audit, 3 empirical churn findings, ML model benchmark table, and retention campaign ROI analysis. |
 | **2. Architecture & Folder Guide** (4 Pages) | [`Project_Architecture_and_Folder_Guide.pdf`](Project_Architecture_and_Folder_Guide.pdf) | Technical document explaining the purpose of every folder (`data/`, `src/`, `sql/`, `tableau/`, `models/`, `reports/`) and software design patterns. |
-| **3. HR & Interview Discussion Guide** (4 Pages) | [`HR_and_Interview_Discussion_Guide.pdf`](HR_and_Interview_Discussion_Guide.pdf) | **Candidate interview playbook:** 30-second & 2-minute elevator pitches, STAR method breakdown, exact answers to 6 tough interview questions, metric flashcards, and role-specific pitch strategies. |
 
 ---
 
@@ -55,19 +54,15 @@ This repository includes 3 distinct, publication-quality PDF guides compiled usi
 
 ```
 Customer Churn & Retention Analytics/
-├── customer_churn_analytics.json                  # Original project specification & objectives
 ├── README.md                                      # Comprehensive project documentation
-├── RESUME_DESCRIPTION.md                          # ATS-optimized resume bullet points & pitch
 ├── LICENSE                                        # MIT open source license
 ├── requirements.txt                               # Environment dependencies
 ├── main.py                                        # Master CLI pipeline runner
 ├── generate_pdf_report.py                         # 5-page Executive PDF compiler
 ├── generate_folder_guide_pdf.py                   # 4-page Architecture & Folder Guide compiler
-├── generate_hr_guide_pdf.py                       # 4-page HR & Interview Discussion Guide compiler
 │
 ├── Customer_Churn_Retention_Analytics_Report.pdf  # Executive 5-page PDF report
 ├── Project_Architecture_and_Folder_Guide.pdf      # Technical 4-page architecture guide
-├── HR_and_Interview_Discussion_Guide.pdf          # HR & candidate interview playbook
 │
 ├── .github/
 │   └── workflows/

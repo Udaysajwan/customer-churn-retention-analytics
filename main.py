@@ -142,12 +142,6 @@ def run_report():
     shutil.copy2(arch_pdf, os.path.join(BASE_DIR, 'reports', 'Project_Architecture_and_Folder_Guide.pdf'))
     print("    [+] Architecture Guide compiled: Project_Architecture_and_Folder_Guide.pdf")
 
-    # 3. HR & Interview Discussion Guide (4 pages)
-    from generate_hr_guide_pdf import build_hr_guide_pdf
-    hr_pdf = os.path.join(BASE_DIR, 'HR_and_Interview_Discussion_Guide.pdf')
-    build_hr_guide_pdf(hr_pdf)
-    shutil.copy2(hr_pdf, os.path.join(BASE_DIR, 'reports', 'HR_and_Interview_Discussion_Guide.pdf'))
-    print("    [+] HR Interview Playbook compiled: HR_and_Interview_Discussion_Guide.pdf")
 
     # 4. Sync interactive dashboard to docs/index.html for GitHub Pages hosting
     docs_dir = os.path.join(BASE_DIR, 'docs')
