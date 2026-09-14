@@ -5,8 +5,8 @@ This guide provides ATS-optimized, high-impact bullet points and project descrip
 ---
 
 ## 🎯 Quick Links & Deliverables Placeholder
-- **Live Hosted Web Simulator:** `https://<your-username>.github.io/customer-churn-retention-analytics/` *(via GitHub Pages `/docs`)*
-- **GitHub Repository:** `https://github.com/<your-username>/customer-churn-retention-analytics`
+- **Live Hosted Web Simulator:** `https://Udaysajwan.github.io/customer-churn-retention-analytics/` *(via GitHub Pages `/docs`)*
+- **GitHub Repository:** `https://github.com/Udaysajwan/customer-churn-retention-analytics`
 - **Candidate HR & Interview Guide:** [`HR_and_Interview_Discussion_Guide.pdf`](HR_and_Interview_Discussion_Guide.pdf)
 - **Executive Intelligence PDF:** [`Customer_Churn_Retention_Analytics_Report.pdf`](Customer_Churn_Retention_Analytics_Report.pdf)
 - **Folder Architecture PDF:** [`Project_Architecture_and_Folder_Guide.pdf`](Project_Architecture_and_Folder_Guide.pdf)
@@ -17,7 +17,7 @@ This guide provides ATS-optimized, high-impact bullet points and project descrip
 ## 📄 Option 1: Standard Resume Format (Best for Data Science & ML Resumes)
 
 **Customer Churn & Retention Analytics | Python, Scikit-Learn, XGBoost, SQL, Tableau**  
-*[Live Demo](https://<your-username>.github.io/customer-churn-retention-analytics/)* | *[GitHub Repo](https://github.com/<your-username>/customer-churn-retention-analytics)*
+*[Live Demo](https://Udaysajwan.github.io/customer-churn-retention-analytics/)* | *[GitHub Repo](https://github.com/Udaysajwan/customer-churn-retention-analytics)*
 - Engineered an end-to-end subscriber intelligence and predictive churn pipeline across **10,000 customer records**, diagnosing formatting defects (whitespace charges in new accounts) and achieving 100% data integrity without biased row deletion.
 - Isolated empirical behavioral tipping points via EDA, discovering **month-to-month contracts incur 4.0x higher churn** vs. two-year contracts, and **customer support tickets >3 trigger an 81.7% attrition probability cliff**.
 - Trained and benchmarked **Logistic Regression, Random Forest, and XGBoost** classifiers with class-imbalance weighting, selecting Logistic Regression for deployment based on **74.88% Recall** and **0.787 ROC-AUC** to prioritize early intervention.
@@ -29,7 +29,7 @@ This guide provides ATS-optimized, high-impact bullet points and project descrip
 ## 📊 Option 2: Data Analyst / Business Intelligence Focus (Best for BI & Analytics Roles)
 
 **Customer Churn & Revenue Retention Analytics | SQL, Python, Tableau, Business Analytics**  
-*[Live Demo](https://<your-username>.github.io/customer-churn-retention-analytics/)* | *[GitHub Repo](https://github.com/<your-username>/customer-churn-retention-analytics)*
+*[Live Demo](https://Udaysajwan.github.io/customer-churn-retention-analytics/)* | *[GitHub Repo](https://github.com/Udaysajwan/customer-churn-retention-analytics)*
 - Audited 10,000 telecommunications accounts to quantify **$231.9K in monthly recurring revenue (MRR) lost** (34.8% revenue loss ratio), establishing key financial benchmarks including **$1,848 Average CLV**.
 - Developed an enterprise **SQL analysis suite** utilizing Common Table Expressions (CTEs) and multi-level window functions to track retention across tenure bands and payment categories, revealing automatic payments reduce churn by **27.8%**.
 - Designed a **Tableau-ready data model** with custom Level of Detail (LOD) expressions, risk segmentation flags, and calculated fields to bridge data science outputs with executive BI reporting.
@@ -40,7 +40,7 @@ This guide provides ATS-optimized, high-impact bullet points and project descrip
 ## ⚡ Option 3: Concise 3-Bullet Format (For Tight 1-Page Resumes)
 
 **Customer Churn & Retention Predictive Analytics** | *Python, Scikit-Learn, XGBoost, SQL*  
-*[Live Web App](https://<your-username>.github.io/customer-churn-retention-analytics/)* | *[GitHub Repo](https://github.com/<your-username>/customer-churn-retention-analytics)*
+*[Live Web App](https://Udaysajwan.github.io/customer-churn-retention-analytics/)* | *[GitHub Repo](https://github.com/Udaysajwan/customer-churn-retention-analytics)*
 - Built an end-to-end ML churn prediction pipeline on 10,000 telecom accounts, optimizing **Logistic Regression** to **74.88% Recall** and **0.787 ROC-AUC** to intercept at-risk subscribers before cancellation.
 - Discovered key behavioral tipping points (e.g. >3 support tickets causes an 81.7% churn probability cliff; auto-pay reduces churn by 27.8%) and authored an enterprise **ANSI SQL** analysis suite with window functions.
 - Formulated an $85/user proactive retention intervention for high-risk cohorts, saving **$78,060 in annual revenue** at a **175.51% net campaign ROI** ($45.6K net profit).
@@ -51,8 +51,8 @@ This guide provides ATS-optimized, high-impact bullet points and project descrip
 
 > **Customer Churn & Retention Analytics: End-to-End Predictive Modeling & Revenue Preservation**  
 > Built a complete subscriber intelligence and retention optimization system analyzing 10,000 customer accounts in Python and SQL. Audited raw billing anomalies, proved that technical support friction (>3 tickets) triggers an 81.7% churn cliff, and benchmarked Logistic Regression, Random Forest, and XGBoost classifiers (optimizing for 74.88% Recall and 0.787 ROC-AUC). Connected algorithmic predictions directly to financial balance sheets by modeling an intervention strategy for early-tenure high-friction subscribers that yields a 175.51% net campaign ROI ($78K annual revenue preserved). Deliverables include modular Python code, ANSI SQL cohort scripts, Tableau data models, an interactive web dashboard simulator hosted on GitHub Pages, and an executive PDF intelligence report.  
-> 🌐 **Live Simulator:** https://<your-username>.github.io/customer-churn-retention-analytics/  
-> 🔗 **Repository:** https://github.com/<your-username>/customer-churn-retention-analytics
+> 🌐 **Live Simulator:** https://Udaysajwan.github.io/customer-churn-retention-analytics/  
+> 🔗 **Repository:** https://github.com/Udaysajwan/customer-churn-retention-analytics
 
 ---
 
@@ -81,7 +81,7 @@ git add .
 git commit -m "feat: complete GitHub Pages hosting, repository readiness, and HR interview guide"
 
 # 3. Link your GitHub repository (replace with your actual GitHub username)
-git remote add origin https://github.com/<your-username>/customer-churn-retention-analytics.git
+git remote add origin https://github.com/Udaysajwan/customer-churn-retention-analytics.git
 
 # 4. Push to GitHub
 git push -u origin main
@@ -91,4 +91,4 @@ git push -u origin main
 1. In your GitHub repo, go to **Settings** > **Pages**.
 2. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
 3. Select branch **`main`** and folder **`/docs`**, then click **Save**.
-4. GitHub will host your interactive dashboard at: `https://<your-username>.github.io/customer-churn-retention-analytics/`.
+4. GitHub will host your interactive dashboard at: `https://Udaysajwan.github.io/customer-churn-retention-analytics/`.

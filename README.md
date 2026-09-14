@@ -1,7 +1,7 @@
 ﻿# Customer Churn & Retention Analytics
 ### Enterprise Subscriber Intelligence, Predictive Risk Modeling & Retention ROI Optimization
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen.svg)](https://<your-username>.github.io/customer-churn-retention-analytics/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-brightgreen.svg)](https://Udaysajwan.github.io/customer-churn-retention-analytics/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.11%20%7C%203.14-blue.svg)](https://www.python.org/)
 [![Scikit-Learn](https://img.shields.io/badge/scikit--learn-v1.9-orange.svg)](https://scikit-learn.org/)
@@ -14,7 +14,7 @@
 ## 🌐 Live Interactive Web Simulator (Hosted on GitHub Pages)
 
 Experience the live interactive web simulator without running any code:  
-👉 **[Launch Live Interactive Dashboard & Churn Simulator](https://<your-username>.github.io/customer-churn-retention-analytics/)**  
+👉 **[Launch Live Interactive Dashboard & Churn Simulator](https://Udaysajwan.github.io/customer-churn-retention-analytics/)**  
 *(Or open local `docs/index.html` or `reports/interactive_dashboard.html` in any browser)*
 
 ### How to Enable 1-Click Free Hosting on Your GitHub Repository:
@@ -22,7 +22,7 @@ Experience the live interactive web simulator without running any code:
 2. On GitHub, navigate to **Settings** > **Pages**.
 3. Under **Build and deployment** > **Source**, choose **Deploy from a branch**.
 4. Set Branch to **`main`** and folder to **`/docs`**, then click **Save**.
-5. Your interactive dashboard is now hosted live at `https://<your-username>.github.io/customer-churn-retention-analytics/`!
+5. Your interactive dashboard is now hosted live at `https://Udaysajwan.github.io/customer-churn-retention-analytics/`!
 
 ---
 
