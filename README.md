@@ -31,23 +31,22 @@ Experience the live interactive web simulator without running any code:
 In subscription and telecommunications business models, **Customer Acquisition Cost (CAC) is 5x to 7x higher than Customer Retention Cost (CRC)**. Preventing customer churn directly preserves **Monthly Recurring Revenue (MRR)** and maximizes **Customer Lifetime Value (CLV)**.
 
 This repository is built as a modular, production-grade data science project:
-- Starts from **raw subscriber data** (`data/raw_customer_churn_data.csv`) containing realistic real-world data quality defects (e.g. unbilled new signups with whitespace charges).
+- Starts from **raw subscriber data** (`data/raw_customer_churn_data.csv`) containing realistic real-world data quality defects (unbilled new signups with whitespace charges).
 - Provides a **dedicated data cleansing & quality audit notebook** (`notebooks/01_data_cleansing_and_audit.ipynb`) that isolates root causes and verifies the raw-to-clean transformation.
 - Implements a **modular analytical and ML pipeline** in `src/` to train models, evaluate recall/ROC-AUC, and model targeted retention economics.
 - Includes an **executive master runner** (`main.py`) allowing you to execute the entire pipeline or individual steps on demand.
-- Delivers **3 publication-grade PDF documents** for executives, technical engineers, and HR interviewers.
+- Automatically compiles **publication-grade PDF intelligence reports** upon execution.
 
 ---
 
-## 📚 Comprehensive PDF Documentation Guides
+## 📚 Executive PDF Reports
 
-This repository includes 3 distinct, publication-quality PDF guides compiled using ReportLab:
+When you execute the pipeline (`python main.py` or `python main.py --step report`), the following publication-quality PDF reports are compiled using ReportLab:
 
 | Document | File Path | Audience & Purpose |
 | :--- | :--- | :--- |
-| **1. Executive Intelligence Report** (5 Pages) | [`Customer_Churn_Retention_Analytics_Report.pdf`](Customer_Churn_Retention_Analytics_Report.pdf) | Executive summary, data cleansing audit, 3 empirical churn findings, ML model benchmark table, and retention campaign ROI analysis. |
-| **2. Architecture & Folder Guide** (4 Pages) | [`Project_Architecture_and_Folder_Guide.pdf`](Project_Architecture_and_Folder_Guide.pdf) | Technical document explaining the purpose of every folder (`data/`, `src/`, `sql/`, `tableau/`, `models/`, `reports/`) and software design patterns. |
-| **3. HR & Interview Discussion Guide** (4 Pages) | [`HR_and_Interview_Discussion_Guide.pdf`](HR_and_Interview_Discussion_Guide.pdf) | **Candidate interview playbook:** 30-second & 2-minute elevator pitches, STAR method breakdown, exact answers to 6 tough interview questions, metric flashcards, and role-specific pitch strategies. |
+| **Executive Intelligence Report** (5 Pages) | `Customer_Churn_Retention_Analytics_Report.pdf` | Executive summary, data cleansing audit, 3 empirical churn findings, ML model benchmark table, and retention campaign ROI analysis. |
+| **Architecture & Folder Guide** (4 Pages) | `Project_Architecture_and_Folder_Guide.pdf` | Technical document explaining the purpose of every folder (`data/`, `src/`, `sql/`, `tableau/`, `models/`, `reports/`) and software design patterns. |
 
 ---
 
@@ -55,19 +54,12 @@ This repository includes 3 distinct, publication-quality PDF guides compiled usi
 
 ```
 Customer Churn & Retention Analytics/
-├── customer_churn_analytics.json                  # Original project specification & objectives
 ├── README.md                                      # Comprehensive project documentation
-├── RESUME_DESCRIPTION.md                          # ATS-optimized resume bullet points & pitch
 ├── LICENSE                                        # MIT open source license
 ├── requirements.txt                               # Environment dependencies
 ├── main.py                                        # Master CLI pipeline runner
 ├── generate_pdf_report.py                         # 5-page Executive PDF compiler
 ├── generate_folder_guide_pdf.py                   # 4-page Architecture & Folder Guide compiler
-├── generate_hr_guide_pdf.py                       # 4-page HR & Interview Discussion Guide compiler
-│
-├── Customer_Churn_Retention_Analytics_Report.pdf  # Executive 5-page PDF report
-├── Project_Architecture_and_Folder_Guide.pdf      # Technical 4-page architecture guide
-├── HR_and_Interview_Discussion_Guide.pdf          # HR & candidate interview playbook
 │
 ├── .github/
 │   └── workflows/
@@ -77,8 +69,8 @@ Customer Churn & Retention Analytics/
 │   └── index.html                                 # Live GitHub Pages interactive dashboard
 │
 ├── data/
-│   ├── raw_customer_churn_data.csv                # 10k raw records with unbilled Total_Charges whitespace
-│   └── cleaned_customer_churn_data.csv            # Cleaned, validated baseline dataset
+│   └── raw_customer_churn_data.csv                # 10k raw records with unbilled Total_Charges whitespace
+│   # Note: cleaned_customer_churn_data.csv is generated when you run the pipeline!
 │
 ├── notebooks/
 │   ├── 01_data_cleansing_and_audit.ipynb          # Dedicated raw-to-clean data auditing & visual notebook
@@ -98,22 +90,18 @@ Customer Churn & Retention Analytics/
 │   └── churn_analysis.sql                         # Enterprise ANSI SQL suite (CTEs, Window functions, Cohorts)
 │
 ├── tableau/
-│   ├── tableau_calculated_fields.md               # Tableau LOD formulas and dashboard layout guide
-│   └── tableau_churn_dataset.csv                  # Tableau-ready enriched dataset
+│   └── tableau_calculated_fields.md               # Tableau LOD formulas and dashboard layout guide
+│   # Note: tableau_churn_dataset.csv is exported upon pipeline execution!
 │
 ├── reports/
-│   ├── executive_summary.md                       # Business summary report
-│   ├── interactive_dashboard.html                 # Browser dashboard with interactive simulator
-│   ├── model_benchmarks.json                      # Precision, Recall, F1, ROC-AUC metrics
-│   ├── retention_financial_summary.json           # Campaign financial ROI breakdown
-│   ├── Customer_Churn_Retention_Analytics_Report.pdf
-│   ├── Project_Architecture_and_Folder_Guide.pdf
-│   └── HR_and_Interview_Discussion_Guide.pdf
+│   └── interactive_dashboard.html                 # Browser dashboard with interactive simulator
+│   # Note: Metrics JSON and PDF reports are generated upon execution!
 │
 ├── models/
-│   └── best_churn_model.joblib                    # Serialized production pipeline (Logistic Regression)
+│   └── .gitkeep                                   # Model artifacts saved here upon training (.joblib)
 │
-└── visualizations/                                # 10 publication-quality 300 DPI PNG charts
+└── visualizations/
+    └── .gitkeep                                   # 10 publication-quality PNG charts saved here
 ```
 
 ---
@@ -126,7 +114,7 @@ pip install -r requirements.txt
 ```
 
 ### 2. Option A: Run the Complete Pipeline (One Command)
-To run the entire pipeline end-to-end (clean data, generate plots, train models, compute retention economics, compile all 3 PDFs, and update the GitHub Pages dashboard):
+To run the entire pipeline end-to-end (clean data, generate plots, train models, compute retention economics, compile PDF reports, and update the GitHub Pages dashboard):
 ```bash
 python main.py
 ```
@@ -147,7 +135,7 @@ python main.py --step train
 # Step 4: Calculate retention economics -> saves financial ROI & Tableau extract
 python main.py --step strategy
 
-# Step 5: Compile all 3 PDF reports and sync GitHub Pages web app
+# Step 5: Compile PDF reports and sync GitHub Pages web app
 python main.py --step report
 ```
 
