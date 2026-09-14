@@ -124,19 +124,39 @@ def run_strategy(clean_path=None):
     print(f"    Tableau extract saved to: tableau/tableau_churn_dataset.csv")
 
 def run_report():
-    print("\n[Step 5/5] Compiling 5-Page Executive PDF Report...")
+    print("\n[Step 5/5] Compiling Executive PDF Reports & Syncing Web Dashboard...")
     start = time.time()
+    import shutil
+    
+    # 1. Executive Intelligence Report (5 pages)
     from generate_pdf_report import build_pdf
     pdf_path = os.path.join(BASE_DIR, 'Customer_Churn_Retention_Analytics_Report.pdf')
     build_pdf(pdf_path)
-    
-    reports_pdf = os.path.join(BASE_DIR, 'reports', 'Customer_Churn_Retention_Analytics_Report.pdf')
-    import shutil
-    shutil.copy2(pdf_path, reports_pdf)
+    shutil.copy2(pdf_path, os.path.join(BASE_DIR, 'reports', 'Customer_Churn_Retention_Analytics_Report.pdf'))
+    print("    [+] Executive PDF compiled: Customer_Churn_Retention_Analytics_Report.pdf")
+
+    # 2. Architecture & Folder Guide (4 pages)
+    from generate_folder_guide_pdf import build_folder_guide_pdf
+    arch_pdf = os.path.join(BASE_DIR, 'Project_Architecture_and_Folder_Guide.pdf')
+    build_folder_guide_pdf(arch_pdf)
+    shutil.copy2(arch_pdf, os.path.join(BASE_DIR, 'reports', 'Project_Architecture_and_Folder_Guide.pdf'))
+    print("    [+] Architecture Guide compiled: Project_Architecture_and_Folder_Guide.pdf")
+
+    # 3. HR & Interview Discussion Guide (4 pages)
+    from generate_hr_guide_pdf import build_hr_guide_pdf
+    hr_pdf = os.path.join(BASE_DIR, 'HR_and_Interview_Discussion_Guide.pdf')
+    build_hr_guide_pdf(hr_pdf)
+    shutil.copy2(hr_pdf, os.path.join(BASE_DIR, 'reports', 'HR_and_Interview_Discussion_Guide.pdf'))
+    print("    [+] HR Interview Playbook compiled: HR_and_Interview_Discussion_Guide.pdf")
+
+    # 4. Sync interactive dashboard to docs/index.html for GitHub Pages hosting
+    docs_dir = os.path.join(BASE_DIR, 'docs')
+    os.makedirs(docs_dir, exist_ok=True)
+    shutil.copy2(os.path.join(BASE_DIR, 'reports', 'interactive_dashboard.html'), os.path.join(docs_dir, 'index.html'))
+    print("    [+] Web Simulator synced for GitHub Pages: docs/index.html")
     
     elapsed = time.time() - start
-    print(f"[+] Step 5 Complete: Executive PDF compiled in {elapsed:.2f}s")
-    print(f"    Report available at: Customer_Churn_Retention_Analytics_Report.pdf")
+    print(f"[+] Step 5 Complete: All reports and GitHub Pages assets compiled in {elapsed:.2f}s")
 
 def main():
     parser = argparse.ArgumentParser(description="Customer Churn & Retention Analytics Master Pipeline")
